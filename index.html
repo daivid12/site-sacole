@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorveteria do Sacolé</title>
+       
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+	  background-image: url('sacole.jpeg'); /* Caminho para a imagem de fundo */
+      background-size: cover;
+      padding: 20px;
+      background-color: #ffcc00; /* Cor de fundo do container - Amarelo */
+    }
+    header {
+      background-color: #ffcc00;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+      color: #ffffff;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #ffcc00;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333333;
+    }
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #ffcc00;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #ffa500;
+    }
+    .instagram-icon {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .instagram-icon img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ffcc00;
+      padding: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .instagram-icon img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sorveteria do Sacolé</h1>
+    <p>Bem vindo a sorveteria do sacolé online sou aluna do Instituto Federal Fluminense e diariamente vendo sacolé gourmet pelo iff por apenas R$3,00 e esse site serve para fazer reservas de sabores, espero que gostem do meu trabalho! </p>
+  </header>
+    
+     <script>
+    function calcularValor() {
+      var quantidade = document.getElementById('quantidade').value;
+      var valorUnitario = 3; // Valor de cada sacolé
+
+      var valorTotal = quantidade * valorUnitario;
+
+      document.getElementById('valorTotal').innerText = 'Valor total a pagar: R$ ' + valorTotal.toFixed(2);
+    }
+  </script>
+
+  <div class="container">
+    <h2>Reserve seu Sacolé Aqui!</h2>
+
+      
+    <form action="mailto:daividnascimento50@gmail.com" method="post" enctype="text/plain">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome">
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone"> <br>
+                                    
+      <label for="sabor">Sabor:</label>
+      <select id="sabor" name="sabor">
+        <option value="">Escolha um sabor</option>
+        <option value="Maracuja">Maracujá</option>
+        <option value="Geleia de morango">Geleia de morango</option>
+        <option value="Geleia de morango com ninho">Geleia de morango com ninho</option>
+        <option value="Coco">Coco</option>
+        <option value="Amendoim">Amendoim</option>
+        <option value="Ninho com Nutella">Ninho com Nutella</option>
+        <option value="Açai">Açaí</option>
+        <option value="Uva">Uva</option>
+        <option value="Limão">Limão</option>
+        <option value="Brigadeiro">Brigadeiro</option>
+        <option value="Oreo">Oreo</option>
+          
+      </select>
+        <br>
+      <p>O preço do sacolé é R$ 3,00 cada.</p>
+        
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" min="1" value="1">
+
+      <button type="button" onclick="calcularValor()">Calcular Valor</button>
+      <p id="valorTotal"></p>
+        
+      <label for="sugestao">Sugestoes:</label>
+      <textarea id="sugestões" name="sugestões" rows="4" cols="30"></textarea>
+      
+      <input type="submit" value="Reservar">
+        
+    </form>
+    
+    <div class="instagram-icon">
+      <a href="https://instagram.com/carol_docerias?igshid=MzMyNGUyNmU2YQ target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
+      <center>
+      <p>Entre em contato conosco pelo Instagram para mais informações e novidades!</p>
+      </center>
+  </div>
+</body>
+</html>
+
